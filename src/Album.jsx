@@ -54,12 +54,13 @@ const styles = theme => ({
     // cardContent:{
     //   flexGrow:1,
     // },
-    // footer:{
-    //   backgroundColor: theme.palette.background.paper,
-    //   padding: theme.spacing.unit * 6,
-    // },
+    footer:{
+      backgroundColor: theme.palette.background.paper,
+      padding: theme.spacing.unit * 6,
+    },
 });
 
+// for cards UI
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 const Album = (props) => {
@@ -103,16 +104,24 @@ const Album = (props) => {
             </Grid>
           </div>
           {/* Grid container */}
+          <Typography variant="h6" align="center" color="textSecondary">
+            Grid card content will appear here
+          </Typography>
           <Grid container spacing={40}>
-            {/* cardsをmapして,1~12までの配列の中身を以下の情報に入れ替える */}
-            {cards.map(card=>(
-              <Grid item key={card} sm={6} md={4} lg={3}>
-                <CardMedia></CardMedia>
-              </Grid>
-            ))}
+            
           </Grid>
         </div>
       </div>
+
+      {/* Footer - gutterBottomと記載すると、その下にコンテンツが近接している場合に勝手にマージンをつけてくれる*/}
+      <footer className={classes.footer} gutterBottom>
+        <Typography variant="h6" align="center">
+          Footer
+        </Typography>
+        <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
+          something here to give the footer purpose :{`)`}
+        </Typography>
+      </footer>
     </React.Fragment>
   )
 }

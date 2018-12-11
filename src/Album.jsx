@@ -75,9 +75,15 @@ const Album = (props) => {
       {/* Hero Unit */}
       <div className={classes.heroUnit}>
         <div className={classes.heroContent}>
-          {/* h1 */}
-          <Typography component="h1" variant="h2" align="center" color="textPrimary">
+          {/* h1 - title */}
+          <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
             Album Layout
+          </Typography>
+          {/* h6 - subtitle / textSecondary changes the color to gray / paragraph changes the margin*/}
+          <Typography variant="h6" align="center" color="textSecondary" paragraph>
+            Something short and leading about the collection below—its contents, the creator, etc.
+            Make it short and sweet, but not too short so folks don&apos;t simply skip over it
+            entirely.
           </Typography>
         </div>
       </div>

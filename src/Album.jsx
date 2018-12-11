@@ -9,6 +9,7 @@ import Grid from '@material-ui/core/Grid';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
+import { CardMedia } from '@material-ui/core';
 
 
 const styles = theme => ({
@@ -87,6 +88,8 @@ const Album = (props) => {
             Make it short and sweet, but not too short so folks don&apos;t simply skip over it
             entirely.
           </Typography>
+
+          {/* Hero Content */}
           <div className={classes.heroButtons}>
             {/* Grid container */}
             <Grid container spacing={16} justify="center">
@@ -99,6 +102,15 @@ const Album = (props) => {
               </Grid>
             </Grid>
           </div>
+          {/* Grid container */}
+          <Grid container spacing={40}>
+            {/* cardsをmapして,1~12までの配列の中身を以下の情報に入れ替える */}
+            {cards.map(card=>(
+              <Grid item key={card} sm={6} md={4} lg={3}>
+                <CardMedia></CardMedia>
+              </Grid>
+            ))}
+          </Grid>
         </div>
       </div>
     </React.Fragment>

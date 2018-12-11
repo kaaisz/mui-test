@@ -6,11 +6,7 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-      <React.Fragment>
         <Album/>
-        <Button variant="contained" color="primary">Hello World</Button>
-      </React.Fragment>
-      
     )
   }
 }

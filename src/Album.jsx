@@ -3,10 +3,12 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 // import from MUI
 import AppBar from '@material-ui/core/AppBar';
+import Button from '@material-ui/core/Button';
 import CameraIcon from '@material-ui/icons/PhotoCamera';
+import Grid from '@material-ui/core/Grid';
+import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
-import { Toolbar } from '@material-ui/core';
 
 
 const styles = theme => ({
@@ -19,24 +21,24 @@ const styles = theme => ({
     heroUnit: {
       backgroundColor: theme.palette.background.paper, //background-color:#000000;
     },
-    // heroContent:{
-    //   maxWidth:600, //max-width:600;
-    //   margin:`0 auto`, //margin:0 auto;
-    //   padding:`${theme.spacing.unit * 8}px 0 ${theme.spacing.unit *6}px` //padding:00px 0 00px
-    // },
-    // heroButtons:{
-    //   marginTop: theme.spacing.unit * 4,
-    // },
-    // layout:{
-    //   width:'auto',
-    //   marginLeft:theme.spacing.unit * 3,
-    //   marginRight:theme.spacing.unit * 3,
-    //   [theme.breakpoints.up(1100 + theme.spacing.unit * 3 * 2)]:{
-    //     width:1100,
-    //     marginLeft:'auto',
-    //     marginRight: 'auto',
-    //   },
-    // },
+    heroContent:{
+      maxWidth:600, //max-width:600;
+      margin:`0 auto`, //margin:0 auto;
+      padding:`${theme.spacing.unit * 8}px 0 ${theme.spacing.unit *6}px` //padding:00px 0 00px
+    },
+    heroButtons:{
+      marginTop: theme.spacing.unit * 4,
+    },
+    layout:{
+      width:'auto',
+      marginLeft:theme.spacing.unit * 3,
+      marginRight:theme.spacing.unit * 3,
+      [theme.breakpoints.up(1100 + theme.spacing.unit * 3 * 2)]:{
+        width:1100,
+        marginLeft:'auto',
+        marginRight: 'auto',
+      },
+    },
     // cardGrid:{
     //   padding: `${theme.spacing.unit * 8}px 0`,
     // },
@@ -85,6 +87,18 @@ const Album = (props) => {
             Make it short and sweet, but not too short so folks don&apos;t simply skip over it
             entirely.
           </Typography>
+          <div className={classes.heroButtons}>
+            {/* Grid container */}
+            <Grid container spacing={16} justify="center">
+              {/* inside contents of grid */}
+              <Grid item>
+                <Button variant="contained" color="primary">Main Call to Action</Button>
+              </Grid>
+              <Grid item>
+                <Button variant="outlined" color="primary">Secondary Action</Button>
+              </Grid>
+            </Grid>
+          </div>
         </div>
       </div>
     </React.Fragment>

@@ -64,12 +64,23 @@ const Album = (props) => {
 
   return(
     <React.Fragment>
+      {/* Header */}
       <AppBar position="static" className={classes.appBar}>
         <Toolbar>
           <CameraIcon className={classes.icon} />
           <Typography variant="h6" color="inherit" nowrap>Album Layout</Typography>
         </Toolbar>
       </AppBar>
+
+      {/* Hero Unit */}
+      <div className={classes.heroUnit}>
+        <div className={classes.heroContent}>
+          {/* h1 */}
+          <Typography component="h1" variant="h2" align="center" color="textPrimary">
+            Album Layout
+          </Typography>
+        </div>
+      </div>
     </React.Fragment>
   )
 }
